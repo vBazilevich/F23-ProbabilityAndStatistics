@@ -1,0 +1,153 @@
+\documentclass[14pt]{exam}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage{diagbox}
+
+\title{Probability and Statistics. Week 4}
+\date{}
+
+\def\Var{{\textrm{Var}}\,}
+\def\E{{\textrm{E}}\,}
+
+\begin{document}
+	\maketitle
+	
+	
+	\begin{questions}
+		\question
+		Random variable $\zeta$ can take values $-1$, $0$ and $1$. Find its probability mass function given that $\E\zeta = 0$, $\Var \zeta = 0.5$.
+		
+		\textcolor{cyan}{Answer:} $\zeta \sim \begin{pmatrix}
+			-1 & 0 & 1\\
+			0.25 & 0.5 & 0.25
+		\end{pmatrix}$.
+		
+		\question
+		Find the range of variance for random variable $\eta$ if its cumulative distribution function is given by
+		
+		$
+			F_\eta(x) = \begin{cases}
+				0,\, x \leq 0\\
+				0.3,\, 0 < x \leq 2\\
+				b,\, 2 < x \leq 6\\
+				1,\, x > 6
+			\end{cases}
+		$
+		
+		if $b \in (0.3, 1)$.
+		
+		\textcolor{cyan}{Answer:} $0.84 \leq \Var \eta \leq 7.6$.
+		
+		\question
+		The cards are drawn at random one after another from a deck of 52 cards (and they are not returned back to the deck). One continues to draw until he meets the ace of diamonds. What is the average number of cards drawn from the deck? Find the probability that one does not need to take more than half of all of the cards.
+		
+		\textcolor{cyan}{Answer:} $\frac{53}{2}$; $0.5$
+		
+		\question
+		The probabilities to pass the exam for three students are equal to $0.9$, $0.8$ and $0.7$ respectively. They pass or fail independently from each other. Let $\xi$ be equal to the number of students who have passed the exam. Find $\E\xi$ and $\Var\xi$.
+		
+		\textcolor{cyan}{Answer:} $\E\xi = 2.4$, $\Var\xi = 0.46$.
+		
+		\question
+		Eight random balls are taken out of the urn that contains 10 white balls and 15 black balls. What is the average number of white balls among the ones taken?
+		
+		\textcolor{cyan}{Answer:} $3.2$.
+		
+		\question
+		Ten people entered the lift at the ground floor of a nine-storey building. How many stops is the lift going to make as it goes up?
+		
+		\textcolor{cyan}{Answer:} $8 \biggr(1 - \bigr(\frac{7}{8}\bigr)^{10}\biggr)$
+		
+		\question
+		One of three-digit numbers is chosen at random. Determine the expected value of the quantity of different even digits used to write down this number.
+		
+		\textcolor{cyan}{Answer:} $1.31$.
+		
+		\question
+		43 equally strong sportsmen take part in a ski race; 18 of them belong to club A, 10 to club B and 15 to club C. What is the average place for:
+		
+		\begin{parts}
+			\part the best participant from club B;
+			\part the worst participant from club B.
+		\end{parts}
+		
+		\textcolor{cyan}{Answer:} (a) fourth; (b) 40th.
+		
+		\question
+		Let $Y$ be the number of sixes and $Z$ be the number of fours one gets when rolling six dice. Find the expected value and variance of $Y + Z$.
+		
+		\textcolor{cyan}{Answer:} $\E(Y+Z) = 2$, $\Var(Y+Z) = \frac{4}{3}$.
+		
+		%\question
+		%How many times (on average) do we need to roll a die in order to get each of the results 1, 2, 3, 4, 5, 6 at least once?
+		
+		%\textcolor{cyan}{Answer:} $14.7$
+		
+		\question
+		Let us consider the circle of radius $R$ centered at $O$. Point $M$ is chosen at random inside this circle. Random variable $\xi$ is equal to the length of $OM$. Find the expected value and variance of $\xi$.
+		
+		\textit{Hint:} $f_\xi(r) = \begin{cases}\frac{2r}{R^2},\, 0 \leq r < R\\ 0,\, \text{otherwise}\end{cases}$.
+		
+		\textcolor{cyan}{Answer:} $\E\xi = \frac{2}{3}R$, $\Var\xi = \frac{R^2}{18}$.
+		
+		\question
+		Let us consider the ball of radius $R$ centered at $O$. Point $M$ is chosen at random inside this ball. Random variable $\xi$ is equal to the distance from point $M$ to the sphere. Find the expected value and variance of $\xi$.
+		
+		\textit{Hint:} $f_\xi(x) = \begin{cases}
+			3\frac{(R - x)^2}{R^3},\, 0 < x \leq R\\
+			0,\, \text{otherwise}
+		\end{cases}$.
+		
+		\textcolor{cyan}{Answer:} $\E\xi = \frac{R}{4}$, $\Var\xi = \frac{3}{80}R^2$.
+		
+		\question
+		The joint distribution of $\xi$ and $\eta$ is provided in the table below.
+		
+		\begin{tabular}{|l|ccc|}
+			\hline
+			\diagbox{$\eta$}{$\xi$} & $-1$ & $0$ & $1$\\\hline
+			$-2$ & $\frac{3}{17}$ & $\frac{4}{17}$ & $\frac{1}{17}$\\
+			$2$ & $\frac{1}{17}$ & $\frac{5}{17}$ & $\frac{3}{17}$\\\hline
+		\end{tabular}
+		
+		\begin{parts}
+			\part Find marginal distributions of $\xi$ and $\eta$;
+			\part Find expected value and variacne for $\xi$ and $\eta$;
+			\part Determine if $\xi$ and $\eta$ are independent;
+			\part Find correlation coefficient of $\xi$ and $\eta$;
+			\part Find conditional expected values 
+		\end{parts}
+		\textcolor{cyan}{Answer:} (a) $\xi \sim \begin{pmatrix}
+			-1 & 0 & 1\\
+			\frac{4}{17} & \frac{9}{17} & \frac{4}{17}
+		\end{pmatrix}$, $\eta \sim \begin{pmatrix}
+			-2 & 2\\
+			\frac{8}{17} & \frac{9}{17}\end{pmatrix}$;
+			
+			(b) $\E\xi = 0$, $\Var\xi = \frac{8}{17}$, $\E\eta = \frac{2}{17}$, $\Var\eta = \frac{1152}{289}$;
+			
+			(c) dependent;
+			
+			(d) $\rho(\xi, \eta) = \frac{\sqrt{17}}{12}$;
+			
+			(e) $\E(\xi|\eta) \sim \begin{pmatrix}
+				-\frac{2}{8} & \frac{2}{9}\\
+				\frac{8}{17} & \frac{9}{17}
+			\end{pmatrix}$, $\E(\eta|\xi) \sim \begin{pmatrix}
+				-1 & \frac{2}{9} & 1\\
+				\frac{4}{17} & \frac{9}{17} & \frac{4}{17}
+			\end{pmatrix}$
+			
+			\question
+			Let $Y$ be the number of times one needs to flip a coin to get tails and heads at least once. Find the expected value of $Y$.
+			
+			\textcolor{cyan}{Answer:} $\E Y = 3$.
+			
+			%\question
+			%A fair die is rolled until a four is obtained. Find the expected value of a sum obtained in all the rolls.
+			
+			%\textcolor{cyan}{Answer:} $\E S = 21$.
+ 	\end{questions}
+\end{document}

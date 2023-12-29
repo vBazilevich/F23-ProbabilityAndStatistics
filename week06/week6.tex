@@ -1,0 +1,138 @@
+\documentclass[14pt]{exam}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage{diagbox}
+
+\title{Probability and Statistics. Week 6}
+\date{}
+
+\def\Var{{\textrm{Var}}\,}
+\def\E{{\textrm{E}}\,}
+
+\begin{document}
+	\maketitle
+	
+	
+	\begin{questions}
+		\question
+		(Walpole 4.71) The length of time $Y$, in minutes, required to generate a human reflex to tear gas has the density function $f(y) = \begin{cases}
+			\frac{1}{4}e^{-\frac{y}{4}},\, 0\leq y < \infty\\
+			0,\,\text{elsewhere}
+		\end{cases}$
+		
+		\begin{parts}
+			\part What is the mean time to reflex?
+			\part Find $\E Y^2$ and $\Var Y$.
+		\end{parts}
+		
+		\question
+		(Walpole 4.73) Let random variable $Y$ have a probability density function $f(y) = \begin{cases}
+			1,\,7\leq y\leq 8\\
+			0,\,\text{elsewhere}
+		\end{cases}$. Find the expectation of $e^Y$ in two ways:
+		
+		\begin{parts}
+			\part $\E e^Y = \int_7^8 e^y f(y) dy$,
+			\part Using the second order approximation.
+		\end{parts}
+		
+		\question
+		(Walpole 4.74) Consider the random variable $Y$ as in the previous problem. Find $\Var e^Y$ using the exact approach and the approximation of the variance.
+		
+		\question
+		A fair die is rolled until a four is obtained. Find the expected value of a sum obtained in all of the rolls.
+		
+		\textcolor{cyan}{Answer:} $\E S = 21$.
+		
+		\question
+		Find a correlation coefficient between the number of sixes and the number of fives obtained in $K$ rolls of a fair die.
+		
+		\textcolor{cyan}{Answer:} $\rho(\xi, \eta) = -\frac{1}{5}$,
+		
+		\question
+		$\zeta$ is the number of threes and $\eta$ is the number of odd digits obtained when rolling a fair die $K$ times. Find the correlation coefficient between $\eta$ and $\zeta$.
+		
+		\textcolor{cyan}{Answer:} $\rho(\zeta, \eta) = \frac{1}{\sqrt{5}}$.
+		
+		\question
+		Let $\xi$ be a random variable with a finite variance. Prove the inequality: $P(|\xi - \E\xi| \leq 3\sqrt{\Var\xi}) \geq \frac{8}{9}$.
+		
+		\question
+		Let $\epsilon > 0$ and $0 < p < \frac{1}{2}$ and $\xi \sim \begin{pmatrix}
+			-\epsilon & 0 & \epsilon\\
+			p & 1 - 2p & p
+		\end{pmatrix}$. Show that Chebyschev's inequality turns into equality for this distribution: $P(|\xi - \E\xi| \geq \epsilon) = \frac{\Var\xi}{\epsilon^2}$.
+		
+		\question
+		Prove that if random variable $\xi$ is non-negative, integer, and it's expected value $\E\xi$ is finite, then $\E\xi = \sum_{k=1}^\infty P(\xi \geq k)$.
+		
+		\question
+		Calculate the expected value of $\xi\sim G(p)$ using the result from the previous task.
+		
+		\textcolor{cyan}{Answer:} $\E\xi = \frac{1}{p}$.
+		
+		\question
+		$N$ fair dice are rolled. Random variable $\xi$ is the smallest digit obtained.
+		
+		\begin{parts}
+			\part Calculate expected value of $\xi$ if $N = 6$;
+			\part What happens to this expected value as $N \to \infty$?
+		\end{parts}
+		
+		\textcolor{cyan}{Answer:} (a) $\sum_{k=1}^6 (\frac{k}{6})^6 \approx 1.4397$; (b) $\sum_{k=1}^6 (\frac{k}{6})^N \to 1$.
+		
+		\question
+		A marksman hits the target with probability $0.8$. The marksman is shooting until he misses the target at least once and hits the target at least once. Find the expected value of the number of shots.
+		
+		\textcolor{cyan}{Answer:} $\E\xi = 5.25$.
+		
+		\question
+		Random variable $\zeta$ is uniformly distributed on set $\{-1, 0, 1\}$. Let us consider the random variables $\xi = 1 - \zeta^{1000}$ and $\eta = 1 - \zeta^{1001}$.
+		
+		\begin{parts}
+			\part Determine if $\xi$ and $\eta$ are independent;
+			\part Determine if $\xi$ and $\eta$ are correlated.
+		\end{parts}
+		
+		\question
+		Two independent random variables $\eta$ and $\xi$ have geometric distribution with parameter $p$. Prove that $P(\xi = k | \xi + \eta = n) = \frac{1}{n - 1}$.
+		
+		\question
+		Two independent random variables $\xi_1$, $\xi_2$ have geometric distribution with parameters $p_1$ and $p_2$. Find the distribution law of random variable $\xi = \min(\xi_1, \xi_2)$.
+		
+		\textcolor{cyan}{Answer:} $\xi \sim \begin{pmatrix}
+			1 & 2 & \dots & k & \dots\\
+			1 - q_1q_2 & q_1q_2(1 - q_1q_2) & \dots & q_1^{k-1}q_2^{k - 1}(1 - q_1q_2) & \dots
+		\end{pmatrix}$.
+		
+%		\question
+%		Expected value $\mu$ and covariance matrix $\mathcal{K}$ of random vector $\xi = (\xi_1, \xi_2, \xi_3)^T$ are provided: $\mu = \begin{pmatrix}
+%			0\\-3\\1
+%		\end{pmatrix}$, $\mathcal{K} = \begin{pmatrix}
+%			5 & -2 & -1\\
+%			-2 & 1 & 3\\
+%			-1 & 3 & 35
+%		\end{pmatrix}$.
+%		
+%		Calculate the expected value and variance of:
+%		
+%		\begin{parts}
+%			\part $\eta = \xi_1 - \xi_3$;
+%			\part $\eta = 2\xi_1 - \xi_2 + 3\xi_3$;
+%			\part $\eta = -2\xi_1 + 3\xi_2 - \xi_3$.
+%		\end{parts}
+%		\textcolor{cyan}{Answer:} (a) $\E\eta = -1$, $\Var\eta=42$; (b) $\E\eta = 6$, $\Var\eta = 314$; (c) $\E\eta = -10$, $\Var\eta = 66$.
+		
+%		\question
+%		Covariance matrix $\mathcal{K} = \begin{pmatrix}
+%			1 & -1 & 1\\
+%			-1 & 3& \lambda\\
+%			1 & \lambda & 2
+%		\end{pmatrix}$
+%		of random vector $\xi = (\xi_1, \xi_2, \xi_3)^T$ depends on a parameter $\lambda$. Find the value of $\lambda$ such that variance of random variable $\zeta = \lambda\xi_1 + 2\xi_2 -\xi_3$ reaches its minimum.
+%		
+%		\textcolor{cyan}{Answer:} $\lambda = 5 \pm \sqrt{11}$
+	\end{questions}
+\end{document}

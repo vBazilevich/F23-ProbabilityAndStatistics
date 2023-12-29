@@ -1,0 +1,153 @@
+\documentclass[14pt]{exam}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xcolor}
+
+\title{Probability and Statistics. Week 3}
+\date{}
+
+\begin{document}
+	\maketitle
+	
+	
+	\begin{questions}
+		\question
+		Distribution of random variable $\xi$ is given by $\xi \sim \begin{pmatrix}
+			-2 & -1 & 0 & 1 & 2\\
+			0.1 & 0.3 & 0.2 & p & 0.2
+		\end{pmatrix}$. Determine the probability $p$. Draw the graph of a cumulative distribution function $F_\xi(t)$.
+		
+		\textcolor{cyan}{Answer:} $p = 0.2$.
+		
+		\question
+		Let us consider the circle of radius $R$ centered at $O$. Point $M$ is chosen at random inside this circle. Random variable $\xi$ is equal to the length of $OM$. Find the cumulative distribution and probability density functions.
+		
+		\textcolor{cyan}{Answer:} $F_\xi(r) = \begin{cases}
+			0,\, r < 0\\
+			\frac{r^2}{R^2},\, 0 \leq r < R\\
+			1, r \geq R\end{cases}$, $f_\xi(r) = \begin{cases}\frac{2r}{R^2},\, 0 \leq r < R\\ 0,\, \text{otherwise}\end{cases}$.
+		
+		\question
+		Let us consider the ball of radius $R$ centered at $O$. Point $M$ is chosen at random inside this ball. Random variable $\xi$ is equal to the distance from point $M$ to the sphere. Find the cumulative distribution and probability density functions.
+		
+		\textcolor{cyan}{Answer:} $F_\xi(x) = \begin{cases}
+			0, \, x < 0\\
+			1 - \frac{(R-x)^3}{R^3},\, 0 \leq x < R\\
+			1,\, x \geq R
+		\end{cases}$; $f_\xi(x) = \begin{cases}
+		3\frac{(R - x)^2}{R^3},\, 0 < x \leq R\\
+		0,\, \text{otherwise}
+		\end{cases}$
+		
+		\question
+		Find all values of $C$ such that function $F(x) = \begin{cases}
+			0,\, x < 1\\
+			1 - \frac{C}{x},\, x \geq 1
+		\end{cases}$ can be a cumulative distribution function for some random variable $\zeta$. Find the probability density function.
+		
+		\textcolor{cyan}{Answer:} $C = 1$, $f(x) = \begin{cases}
+			\frac{1}{x^2},\, x > 1\\
+			0, \text{otherwise}
+		\end{cases}$
+		
+		\question
+		Is it possible that for some values of $C$ the functions below are probability density functions of random variables? If it is so, find the values of $C$.
+		
+		\begin{parts}
+			\part $f(x) = \begin{cases}
+				Ce^{-2x},\, x > 0\\
+				0,\, x \leq 0
+			\end{cases}$
+			\part $f(x) = Ce^{-|x|}$, $x \in \mathbb{R}$.
+		\end{parts}
+		
+		\textcolor{cyan}{Answer:} (a) $C = 2$ (b) $C = 0.5$.
+		
+		\question
+		Find such value of $C$ that function $f(x) = \frac{C}{1 + x^2}$ is probability density function of a random variable.
+		
+		\textcolor{cyan}{Answer:} $C = \frac{1}{\pi}$
+		
+		\question
+		(Walpole 3.5) Determine the value $c$ so that each of the following functions can serve as a probability distribution of
+		the discrete random variable $X$.
+		
+		\begin{parts}
+			\part $f(x) = c(x^2 + 4)$, $x \in \{0, 1, 2, 3\}$;
+			\part $f(x) = c \binom{2}{x}\binom{3}{3-x}$, $x\in \{0, 1, 2\}$.
+		\end{parts}
+		
+		\textcolor{cyan}{Answer:} (a) $\frac{1}{30}$, (b) $\frac{1}{10}$.
+		
+		\question
+		(Walpole 3.9) The proportion of people who respond to a certain mail-order solicitation is a continuous random variable $X$ that has the density function $f(x) = \begin{cases}
+			\frac{2(x+2)}{5},\, 0 < x < 1\\
+			0,\, \text{elsewhere}
+		\end{cases}$.
+		
+		\begin{parts}
+			\part Show that $P(0 < X < 1) = 1$;
+			\part Find the probability that more than $\frac{1}{4}$ but fewer than $\frac{1}{2}$ of the people contacted will respond to this type of silicitation.
+		\end{parts}
+		
+		\textcolor{cyan}{Answer:} (b) $\frac{19}{80}$.
+		
+		\question
+		(Walpole 3.35) Suppose it is known from large amounts of historical data that $X$, the number of cars that arrive at a specific intersection during a 20-second time period, is characterized by the following discrete probability function: $f(x) = e^{-6}\frac{6^x}{x!}$, for $x = 0, 1, 2, \dots$.
+		
+		\begin{parts}
+			\part Find the probability that in a specific 20-second
+			time period, more than 8 cars arrive at the
+			intersection.
+			\part Find the probability that only 2 cars arrive.
+		\end{parts}
+		
+		\textit{Hint:} $e^6 \approx 400$.
+		
+		\textcolor{cyan}{Answer:} (a) $0.1528$ (b) $0.0446$
+		
+		\question
+		(Walpole 3.42)  Let $X$ and $Y$ denote the lengths of life, in years, of two components in an electronic system. If the joint density function of these variables is $f(x, y) = \begin{cases}
+			e^{-(x+y)},\, x > 0, y > 0\\
+			0,\, \text{elsewhere}
+		\end{cases}$
+		
+		find $P(0 < X < 1 | Y = 2)$.
+		
+		\textcolor{cyan}{Answer:} $1 - \frac{1}{e} \approx 0.6321$
+		
+		\question
+		(Walpole 3.68)  Consider the following joint probability density
+		function of the random variables $X$ and $Y$:
+		
+		$$
+			f(x, y) = \begin{cases}
+				\frac{3x - y}{9},\, 1 < x < 3, 1 < y < 2\\
+				0,\, \text{elsewhere}
+			\end{cases}
+		$$
+		
+		\begin{parts}
+			\part Find the marginal density functions of $X$ and $Y$;
+			\part Are $X$ and $Y$ independent?
+			\part Find $P(X > 2)$.
+		\end{parts}
+		
+		\textcolor{cyan}{Answer:} (a) $g(x) = \frac{x}{3} - \frac{1}{6}$ for $1 < x < 3$ and $h(y) = \frac{4}{3} - \frac{2}{9}y$; (b) No; (c) $\frac{2}{3}$.
+		
+		\question
+		Consider a system of components in which there are 5 independent components, each of which possesses an operational probability of 0.92. The system does have a redundancy built in such that it does not fail if 3 out of the 5 components are operational.
+		
+		\begin{parts}
+			\part Write down the probability mass function;
+			\part What is the probability that the total system is operational?
+		\end{parts}
+		
+		\textcolor{cyan}{Answer:} (a) $f(x) = \begin{cases}
+			\binom{5}{x} \cdot 0.92^x \cdot (1 - 0.92)^{5 - x},\, x \in \{0, 1, 2, 3, 4, 5\}\\
+			0,\, \text{otherwise}
+		\end{cases}$; (b) 0.9955
+		
+ 	\end{questions}
+\end{document}

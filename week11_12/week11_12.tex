@@ -1,0 +1,181 @@
+\documentclass[14pt]{exam}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage{diagbox}
+\usepackage{float}
+
+\title{Probability and Statistics. Weeks 11-12}
+\date{}
+
+\def\Var{{\textrm{Var}}\,}
+\def\E{{\textrm{E}}\,}
+\def\Exp{{\textrm{Exp}}\,}
+
+\begin{document}
+	\maketitle
+
+	\begin{questions}
+		\question
+		(Walpole 7.2)
+		Let $X$ be a binomial random variable with probability distribution
+		$$
+			f(x) = \begin{cases}
+				\binom{3}{x} 0.4^x 0.6^{3 - x},\,x = 0, 1, 2, 3\\
+				0,\,\text{elsewhere}
+			\end{cases}
+		$$
+		
+		Find the probability distribution of the random variable $Y = X^2$.
+		
+		\question
+		(Walpole 7.4)
+		Let $X_1$ and $X_2$ be discrete random variables with joint probability distribution
+		
+		$$
+			f(x_1, x_2) = \begin{cases}
+				\frac{x_1x_2}{18},\,x_1 = 1, 2;\,x_2 = 1,2,3\\
+				0,\,\text{elsewhere}
+			\end{cases}
+		$$
+		
+		Find the probability distribution of the random variable $Y = X_1X_2$.
+		
+		\question
+		(Walpole 7.11) The amount of kerosine, in thousands of liters, in a tank at the beginning of any day is a random amount $Y$ from which a random amount $X$ is sold during that day. Assume that the joint density function of these variables is given by
+		
+		$$
+			f(x, y) = \begin{cases}
+				2,\, 0 < x < y, 0 < y < 1\\
+				0,\,\text{elsewhere}
+			\end{cases}
+		$$
+		
+		Find the probability density function for the amount of kerosine left in the tank at the end of the day.
+		
+		\question
+		(Walpole 7.13)
+		A current of $I$ amperes flowing through a resistance of $R$ ohms varies according to the probability distibution
+		$$
+			f(i) = \begin{cases}
+				6i(1 - i),\, 0 < i < 1\\
+				0,\,\text{elsewhere}
+			\end{cases}
+		$$
+		If the resistance varies independently of the current according to the probability distribution
+		$$
+			g(r) = \begin{cases}
+				2r,\,0 < r < 1\\
+				0,\,\text{elsewhere}
+			\end{cases}
+		$$
+		
+		find the probability distribution for the power $W = I^2R$ watts.
+		
+		\question
+		(Walpole 7.18)
+		A random variable $X$ has the geometric distribution $g(x; p) = pq^{x-1}$ for $x = 1, 2, 3, \dots$. Show that the moment-generating function of $X$ is
+		
+		$$
+			M_X(t) = \frac{pe^t}{1 - qe^t},\,t < -\ln q
+		$$
+		
+		and then use $M_X(t)$ to find the mean and variance of geometric distribution.
+		
+		\question
+		(Walpole 7.19)
+		A random variable $X$ has the Poisson distribution $p(x, \mu) = \frac{e^{-\mu}\mu^x}{x!}$ for $x = 0, 1, 2, \dots$. Show that the moment-generating function of $X$ is
+		
+		$$
+			M_x(t) = e^{\mu(e^t - 1)}
+		$$.
+		
+		Using $M_X(t)$, find the mean and the variance of the Poisson distribution.
+		
+		\question
+		(Walpole 8.11) The numbers of incorrect answers on a true-false competency test for a random sample of 15 students were recorded as follows: $2, 1, 3, 0, 1, 3, 6, 0, 3, 3, 5, 2, 1, 4, 2$. Find the variance using the basic formula and the formula $S^2 = \frac{1}{n(n-1)} \biggr[n\sum_{i=1}^n X_i^2 - \bigr(\sum_{i=1}^n X_i\bigr)^2\biggr]$.
+		
+		
+		\question
+		(Walpole 8.13)
+		The grade-point averages of 20 college seniors selected at random from a graduating class are as follows:
+		\begin{table}[H]
+			\centering
+			\begin{tabular}{ccccc}
+				3.2 & 1.9 & 2.7 & 2.4 & 2.8\\
+				2.9 & 3.8 & 3.0 & 2.5 & 3.3\\
+				1.8 & 2.5 & 3.7 & 2.8 & 2.0\\
+				3.2 & 2.3 & 2.1 & 2.5 & 1.9\\
+			\end{tabular}
+		\end{table}
+		Calculate the standard deviation.
+		
+		\question
+		(Walpole 8.19)
+		A certain type of thread is manufactured with a mean tensile strength of 78.3 kilograms and a standard deviation of 5.6 kilograms. How is the variance of the sample mean changed when the sample size is
+		\begin{parts}
+			\part increased from 64 to 196?
+			\part decreased from 784 to 49?
+		\end{parts}
+		
+		\question
+		(Walpole 8.27)
+		In a chemical process, the amount of a certain type of impurity in the output is difficult to control and is thus a random variable. Speculation is that the population mean amount of the impurity is 0.20 gram per gram of output. It is known that the standard deviation is 0.1 gram per gram. An experiment is conducted to gain more insight regarding the speculation that $\mu = 0.2$. The process is run on a lab scale 50 times and the sample average $\bar{x}$ turns out to be 0.23 gram per gram. Comment on the speculation that the mean amount of impurity is 0.20 gram per gram. Make use of the Central Limit Theorem in your work.
+
+		\question
+		(Walpole 8.29)
+		The distribution of heights of a certain breed of terrier has a mean of 72 centimeters and a standard deviation of 10 centimeters, whereas the distribution of heights of a certain breed of poodle has a mean of 28 centimeters with a standard deviation of 5 centimeters. Assuming that the sample means can be measured to any degree of accuracy, find the probability that the sample mean for a random sample of heights of 64 terriers exceeds the sample mean for a random sample of heights of 100 poodles by at most 44.2 centimeters.
+		
+		\question
+		(Walpole 8.33)
+		The chemical benzene is highly toxic to humans. However, it is used in the manufacture of many medicine dyes, leather, and coverings. Government regulations dictate that for any production process involving benzene, the water in the output of the process must not exceed 7950 parts per million (ppm) of benzene. For a particular process of concern, the water sample was collected by a manufacturer 25 times randomly and the sample average $\bar{x}$ was 7960 ppm. It is known from historical data that the standard deviation $\sigma$ is 100 ppm.
+		
+		\begin{parts}
+			\part What is the probability that the sample average in
+		this experiment would exceed the government limit
+		if the population mean is equal to the limit? Use
+		the Central Limit Theorem.
+			\part Is an observed $\bar{x} = 7960$ in this experiment firm evidence that the population mean for the process exceeds the government limit? Answer your question by computing
+		$$
+			P(\bar{X} \geq 7960 | \mu=7950)
+		$$
+		
+		\end{parts}
+
+		Assume that the distribution of benzene concentration is normal.
+		
+		\question
+		(Walpole 8.42)
+		The scores on a placement test given to college freshmen for the past five years are approximately normally distributed with a mean $\mu = 74$ and a variance $\sigma^2 = 8$. Would you still consider $\sigma^2 = 8$ to be a valid value of the variance if a random sample of 20 students who take the placement test this year obtain a value of $s^2 = 20$?
+		
+		\question
+		(Walpole 8.47)
+		 Given a random sample of size 24 from a normal
+		distribution, find $k$ such that
+		\begin{parts}
+			\part $P(-2.069 < T < k) = 0.965$;
+			\part $P(k < T < 2.807) = 0.095$;
+			\part $P(-k < T < k) = 0.90$.
+		\end{parts}
+		
+		\question
+		(Walpole 8.50)
+		A maker of a certain brand of low-fat cereal bars claims that the average saturated fat content is 0.5 gram. In a random sample of 8 cereal bars of this brand, the saturated fat content was $0.6, 0.7, 0.7, 0.3, 0.4, 0.5, 0.4$ and $0.2$.  Would you agree with the claim? Assume a normal distribution.
+		
+		\question
+		(Walpole 8.51)
+		For an $F$-distribution, find:
+		\begin{parts}
+			\part $f_{0.05}$ with $v_1 = 7$ and $v_2 = 15$;
+			\part $f_{0.05}$ with $v_1 = 15$ and $v_2 = 7$;
+			\part $f_{0.01}$ with $v_1 = 24$ and $v_2 = 19$;
+			\part $f_{0.95}$ with $v_1 = 19$ and $v_2 = 24$;
+			\part $f_{0.99}$ with $v_1 = 28$ and $v_2 = 12$.
+		\end{parts}
+		
+		\question
+		(Walpole 8.59)
+		If $S_1^2$ and $S_2^2$ represent the variance of independent random samples of size $n_1 = 8$ and $n_2 = 12$, taken from normal populations with equal variances, find $P(\frac{S_1^2}{S_2^2} < 4.89)$.
+	\end{questions}
+\end{document}

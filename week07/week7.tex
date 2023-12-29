@@ -1,0 +1,128 @@
+\documentclass[14pt]{exam}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage{diagbox}
+
+\title{Probability and Statistics. Week 7}
+\date{}
+
+\def\Var{{\textrm{Var}}\,}
+\def\E{{\textrm{E}}\,}
+
+\begin{document}
+	\maketitle
+	
+	
+	\begin{questions}
+		
+		\question
+		Expected value $\mu$ and covariance matrix $\mathcal{K}$ of random vector $\xi = (\xi_1, \xi_2, \xi_3)^T$ are provided: $\mu = \begin{pmatrix}
+			0\\-3\\1
+		\end{pmatrix}$, $\mathcal{K} = \begin{pmatrix}
+			5 & -2 & -1\\
+			-2 & 1 & 3\\
+			-1 & 3 & 35
+		\end{pmatrix}$.
+		
+		Calculate the expected value and variance of:
+		
+		\begin{parts}
+			\part $\eta = \xi_1 - \xi_3$;
+			\part $\eta = 2\xi_1 - \xi_2 + 3\xi_3$;
+			\part $\eta = -2\xi_1 + 3\xi_2 - \xi_3$.
+		\end{parts}
+		\textcolor{cyan}{Answer:} (a) $\E\eta = -1$, $\Var\eta=42$; (b) $\E\eta = 6$, $\Var\eta = 314$; (c) $\E\eta = -10$, $\Var\eta = 66$.
+		
+		\question
+		Covariance matrix $\mathcal{K} = \begin{pmatrix}
+			1 & -1 & 1\\
+			-1 & 3& \lambda\\
+			1 & \lambda & 2
+		\end{pmatrix}$
+		of random vector $\xi = (\xi_1, \xi_2, \xi_3)^T$ depends on a parameter $\lambda$. Find the value of $\lambda$ such that variance of random variable $\zeta = \lambda\xi_1 + 2\xi_2 -\xi_3$ reaches its minimum.
+		
+		\textcolor{cyan}{Answer:} $\lambda = 5 \pm \sqrt{11}$
+		
+		\question
+		A book of 600 pages  has on average one typo per page. Evaluate the following probabilities using Poisson approximation for binomial distribution.
+		
+		\begin{parts}
+			\part Page 13 does not have a single typo;
+			\part There are exactly 2 typos on page 13;
+			\part There are no more than three typos on page 13.
+		\end{parts}
+		
+		\textcolor{cyan}{Answer:} (a) $\frac{1}{e}$, (b) $\frac{1}{2e}$, (c) $\frac{8}{3e}$.
+		
+		\question
+		When baking raisin cupcakes, it sometimes (with probability 0.003) happens that a cupcake does not contain any raisins at all. Estimate the probability than in a batch of 1000 cupcakes
+		
+		\begin{parts}
+			\part There are no cupcakes withous raisins;
+			\part There are exactly three cupcakes without raisins;
+			\part There are at least three cupcakes without raisins.
+		\end{parts}
+		
+		\textcolor{cyan}{Answer:} (a) $\frac{1}{e^3}$, (b) $\frac{9}{2e^3}$, (c) $1 - \frac{17}{2e^3}$
+		
+		\question
+		How many raisins do the cupcakes described in the previous problem have to contain on average so that the probability that a cupcake does not have a single raisin does not exceed 0.01?
+		
+		\textcolor{cyan}{Answer:} $\lambda > \ln 100$.
+		
+		\question
+		(Walpole 5.15) It is known that 60\% of mice inoculated with a serum are protected from a certain disease. If 5 mice are inoculated, find the probability that
+		
+		\begin{parts}
+			\part none contracts the disease;
+			\part fewer than 2 contract the disease;
+		\end{parts}
+		
+		\textcolor{cyan}{Answer:} (a) $0.0778$, (b) $0.337$.
+		
+		\question
+		(Walpole 5.18) In testing a certain kind of truck tire over rugged terrain, it is found that $25\%$ of the trucks fail to complete the test run without a blowout.
+		
+		\begin{parts}
+			\part How many of the 15 trucks would you expect to have blowouts?
+			\part What is the variance of the number of blowouts experienced by the 15 trucks?
+		\end{parts}
+		
+		\textcolor{cyan}{Answer:} (a) $\E X = 3.75$, (b) $\Var X = 2.8125$.
+		
+		\question
+		(Walpole 5.58 and 5.63) A certain area of the eastern US is, on average, hit by 6 hurricanes a year. 
+		
+		\begin{parts}
+			\part Find the probability that in a given year that area will be hit by fewere than 4 hurricanes;
+			\part What is the mean and variance of the number of hurricanes per year?
+		\end{parts}
+		\textcolor{cyan}{Answer:} (a) $0.1512$, (b) $\E X = \Var X = 6$.
+		
+		\question
+		(Walpole 5.44) An urn contains 3 green balls, 2 blue balls and 4 red balls. In a random sample of 5 balls, find the probability that both blue balls and at least 1 red ball are selected.
+		
+		\textcolor{cyan}{Answer:} $\frac{17}{63}$.
+		
+				\question
+		Random variable $\zeta$ has a distribution $\zeta \sim \begin{pmatrix}
+			0 & \frac{\pi}{2} & \pi & \frac{3\pi}{2}\\
+			0.1 & 0.2 & 0.3 & 0.4
+		\end{pmatrix}$. Consider the random variables $\eta = \cos \zeta$ and $\xi = \sin\zeta$.
+		
+		\begin{parts}
+			\part Determine if $\eta$ and $\xi$ are independent;
+			\part Determine if $\eta$ and $\xi$ are correlated.
+		\end{parts}
+		
+		\question
+		The card is being drawn from a shuffled deck of 52 cards. The person checks if the card is red or it is a picture (jack, queen or king), returns the card to the deck and shuffles it again. The experiment is repeated $K$ times. Random variable $\eta$ is the number of the red cards observed and random variable $\xi$ is the number of the pictures observed. Find the correlation coefficient between $\eta$ and $\xi$.
+		
+		\question
+		You are rolling a biased die until you get 1. Probability that you get 1 is $\frac{1}{7}$ and probabilities to get 2, 3, 4, 5 or 6 are equal. Find the expected sum of the numbers observed (including 1).
+		
+		\textcolor{cyan}{Answer:} $\E S = 25$.
+	\end{questions}
+\end{document}

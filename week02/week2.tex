@@ -1,0 +1,188 @@
+\documentclass[14pt]{exam}
+
+\usepackage{amsmath}
+\usepackage{xcolor}
+
+\title{Probability and Statistics. Week 2}
+\date{}
+
+\begin{document}
+	\maketitle
+	
+	
+	\begin{questions}
+		\question
+		It is known that some events $A$ and $B$ satisfy the equality $P(A) = P(B) = 0.5$. Find the difference $P(AB) - P(\overline{A}\, \overline{B})$
+		
+		\textcolor{cyan}{Answer:} $0$.
+		
+		\question
+		Prove that
+		\begin{parts}
+			\part $P(AB) \geq P(A) + P(B) - 1$;
+			\part $P(A_1A_2\dots A_n) \geq P(A_1) + P(A_2) + \dots + P(A_n) - (n - 1)$.
+		\end{parts}
+		
+		\question
+		Find the largest and the smallest values of $P(ABC)$ if $P(A) = 0.7$, $P(B) = 0.8$, $P(C) = 0.9$.
+		
+		\question
+		It is known that $P(A) = \frac{2}{3}$, $P(B) = \frac{3}{4}$. Prove that $P(A | B) \geq \frac{5}{9}$.
+		
+		\question
+		Let $A$ and $B$ be independent events. Prove that
+		\begin{parts}
+			\part $A$ and $\overline{B}$ are independent;
+			\part $\overline{A}$ and $\overline{B}$ are independent.
+		\end{parts}
+		
+		%\question
+		%Three snipers are shooting at a target. The probability that they hit the target are equal to 0.7, 0.6 and 0.5 respectively. For the target to be destroyed it is sufficient to hit it once. Find the probability that the target is destroyed given that the snipers shoot independently of each other.
+		
+		%\textcolor{cyan}{Answer:} \textcolor{red}{TODO}.
+		
+		\question
+		Three marksmen are shooting at a target, their probabilities of hitting the target are equal to 0.5, 0.4 and 0.3 respectively (the results are independent). Each of them makes exactly one shot. What is the probability that:
+		\begin{parts}
+			\part The target has not been hit;
+			\part The target has been hit exactly two times;
+			\part The target has been hit at least once.
+		\end{parts}
+		
+		\textcolor{cyan}{Answer:} (a) $0.21$; (b) $0.29$; (c) $0.79$.
+		
+		\question
+		Two players are making turns in flipping a (symmetric) coin. The first of them to get tails wins the game. Find the probability for the first player to lose.
+		
+		\textcolor{cyan}{Answer:} $\frac{1}{3}$.
+		
+		\question
+		Two players are taking turns in drawing cards from a deck of 52 cards. The first player starts with drawing one random card. If it is an ace, he wins the game. Otherwise he returns the card back to the deck, shuffles it properly, and then the second player makes his turn. The game continues until the winner is determined (the first one to draw and ace). Is this a fair game (i.e. the probability for each of the players to win are equal)? Does the game become more fair if the winner is the first to draw the ace of clubs?
+		
+		\textcolor{cyan}{Answer:} No. Yes.
+		
+		\question
+		Ten people enter a ground floor of an eight-storey building. Find the probability that:
+		\begin{parts}
+			\part the lift stops neither on the fourth nor on the fifth floor;
+			\part the lift stops on the forth floor and does not stop on the fifth;
+			\part the lift stops both on the fourth and on the fifth floor;
+						\part the lift stops at least twice;
+			\part the lift stops at least twice, including the stop on the fourth floor.
+		\end{parts}
+		
+		\textcolor{cyan}{Answer:} (a) $\bigr(\frac{3}{4}\bigr)^{10}$; (b) $\bigr(\frac{7}{8}\bigr)^{10} - \bigr(\frac{6}{8}\bigr)^{10}$;
+		(c) $1 + \bigr(\frac{6}{8}\bigr)^{10} - 2 \bigr(\frac{7}{8}\bigr)^{10}$; (d)$1 - \bigr(\frac{1}{8}\bigr)^{9}$; (e) $1 -  \bigr(\frac{1}{8}\bigr)^{10} - \bigr(\frac{7}{8}\bigr)^{10}$.
+		
+		\question
+		There are 7 white balls and 3 black balls in the first urn, 8 white balls and 4 black balls in the second urn, 2 white balls and 13 black balls in the third urn. One of the urns is chosen at random, and a random ball is taken out of it.
+		
+		\begin{parts}
+			\part Determine the probability that the ball is white.
+			\part It is known that the ball taken out of the urn is white. What is the probability that the first urn was chosen out of the three?
+		\end{parts}
+		
+		\textcolor{cyan}{Answer:} (a) $0.5$; (b) $\frac{7}{15}$.
+		
+		\question
+		A hospital specializes in curing three types of diseases: $A$, $B$ and $C$. On average, there are 50\% of patients who suffer from disease $A$, 30\% of patients with disease $B$, and 20\% ot patients with disease $C$ (each of patients has exactly one of these diseases). The probabilities to fully recover from the disease are equal to 0.95, 0.9 and 0.85 respectively. A patient who came to hospital recovered completely. What is the probability that he had disease $B$?
+		
+		\textcolor{cyan}{Answer:} $\frac{18}{61}$.
+		
+		\question
+		There are 5 white and 3 black balls in the first urn, 2 white and 6 black balls in the second urn. Two random balls are transferred from the first urn to the second, and after that some ball is taken from the second urn. This ball happens to be white. Find the probability that two balls of different colours were moved from the first urn to the second.
+		
+		\textcolor{cyan}{Answer:} $\frac{45}{91}$.
+		
+		\question
+		The quantity of passenger cars that pass along the gas station is on average four times greater than that of trucks. The probability that a car refuels is equal to 0.05 for trucks and 0.15 for passenger cars. A car has just left the gas station. What is the probability that it is a truck?
+		
+		\textcolor{cyan}{Answer:} $\frac{1}{13}$.
+		
+		%\question
+		%Three marksmen are shooting at a target. The probabilities for them to hit the target are equal to $\frac{4}{5}$, $\frac{3}{4}$ and $\frac{2}{3}$ respectively. Each of the marksmen fires one shot, and the target is hit exactly two times. Find the probability that the third marksman hit the target.
+		
+		%\textcolor{cyan}{Answer:} $\frac{7}{13}$.
+		
+		\question
+		Three marksmen are shooting at a target. The probabilities for them to hit the target are equal to $\frac{4}{5}$, $\frac{3}{4}$ and $\frac{2}{3}$ respectively. At least two hits are needed for the target to be destroyed. The marksmen fire one shot each, and the target is destroyed. What is the probability that the third marksman has hit the target?
+		
+		\textcolor{cyan}{Answer:} $0.76$.
+		
+		%\question
+		%A white ball is added into an urn that initially contained $n$ balls. It is known that the probabilities of having 0, 1, \dots, n white balls (at the start) in the urn are equal to each other.
+		
+		%\begin{parts}
+		%	\part One ball is taken at random from the urn. What is the probability that this ball is white?
+		%		\part The ball taken from the urn has turned out to be white. Find the most probable number of white balls that were in the urn from the start.
+		%\end{parts}
+		
+		%\textcolor{cyan}{Answer:} (a) $\frac{n+2}{2n+2}$; (b) $n$.
+		
+		%\question
+		%There are 7 white balls and 3 black balls in the first urn; 8 white balls and 4 black balls in the second; 2 white and 13 black balls in the third. One of the urns is chosen at random and a ball is taken out of this urn. The ball has happened to be white. It is returned into the urn, and another ball is randomly chosen from the urn. What is the probability that this ball is also white?
+		
+		%\textcolor{cyan}{Answer:} $\frac{857}{1350}$.
+		
+		\question
+		There were 12 white and 8 black balls in the first urn, 8 white and 4 black balls in the second urn, 10 white balls in the third urn. The fourth urn, that had been empty, was filled with the balls: 6 balls from the first urn, 5 balls from the second, and 4 balls from the third (all the balls were chosen at random). After that two balls were taken out of the fourth urn, and they happened to be white. What is the probability that these balls originate from different urns?
+		
+		\textcolor{cyan}{Answer:} $\approx0.72$.
+		
+		\question
+		Five people entered the lift at the ground floor of a nine-storey building. Find the probability that
+		
+		\begin{parts}
+			\part none of them went out on fifth floor;
+			\part (exactly) one of them went out at the fifth floor;
+			\part (exactly) three of them when out at the fifth floor
+		\end{parts}
+		
+		\textcolor{cyan}{Answer:} (a) $ \bigr(\frac{7}{8}\bigr)^5 \approx 0.513$; (b) $5 \cdot \frac{1}{8}\cdot \bigr(\frac{7}{8}\bigr)^4\approx 0.366$; (c) $10 \cdot \bigr(\frac{1}{8}\bigr)^3 \bigr(\frac{7}{8}\bigr)^2\approx 0.015$.
+		
+		\question
+		What is more probable in case of two equally strong players: to win at least three games out of four or at least six out of eight? No draws are possible.
+		
+		\textcolor{cyan}{Answer:} to win at least 3 games out of 4.
+		
+		\question
+		There are 10 devices installed on a workbench. During the trials each of them may break down with probability $0.15$ independently from other devices. Find the probability that (exactly) three devices have broke down given that not all devices went through the trials successfully.
+		
+		\textcolor{cyan}{Answer:} $\frac{\binom{10}{3}\cdot 0.15^{3}  \cdot 0.85^{7}}{1 - 0.85 ^{10}} \approx 0.15$.
+		
+		%\question
+		%On average 25\% students subscribe to the newsletter. Determine the most probable number of subscribers out of
+		
+		%\begin{parts}
+		%	\part 100 students;
+		%	\part 103 students.
+		%\end{parts}
+		
+		%\textcolor{cyan}{Answer:} (a) 25; (b) 25 or 26.
+		
+		%\question
+		%A square is inscribed into a circle. Four points are chosed randomly inside the circle. What is the probability that there is only one point inside the square? What is the most probable number of points inside the circle?
+		
+		%\textcolor{cyan}{Answer:} $\frac{8}{\pi}\bigr(1 - \frac{2}{\pi}\bigr)^2\approx 0.122$; 3.
+		
+		\question
+		A marksman is shooting at a target until he misses three times. The probability to miss is equal to 0.2 for each of the shots he makes. What is the probability that
+		
+		\begin{parts}
+			\part the marksman uses exactly 7 bullets;
+			\part five bullets are sufficient for him?
+		\end{parts}
+		
+		\textcolor{cyan}{Answer:} (a) $0.049151$; (b) $0.05792$.
+		
+		\question
+		Two players are playing the match (that consists of several games), each of the games can finish in favor of the younger player with probability 0.6 and in favor of the older player with the probability 0.4. The younger player has won exactly five games in the first eight games. What is the probability that he started the match with a defeat?
+		
+		\textcolor{cyan}{Answer:} $\frac{3}{8}$.
+		
+		%\question
+		%Nine people enter the lift at the ground floor of a nine-storey building. What is the probability that the lift stops at each floor as it goes up?
+		
+		%\textcolor{cyan}{Answer:} $\frac{9!}{2^{25}} \approx 0.011$.
+ 	\end{questions}
+\end{document}

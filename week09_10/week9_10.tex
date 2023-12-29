@@ -1,0 +1,175 @@
+\documentclass[14pt]{exam}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage{diagbox}
+
+\title{Probability and Statistics. Week 9-10}
+\date{}
+
+\def\Var{{\textrm{Var}}\,}
+\def\E{{\textrm{E}}\,}
+\def\Exp{{\textrm{Exp}}\,}
+
+\begin{document}
+	\maketitle
+	
+	
+	\begin{questions}
+		% Uniform
+		\question
+		Random vector $(\xi, \eta)^T$ is uniformly distributed inside the ellipse $\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1$.
+		\begin{parts}
+			\part Find marginal distribution of $\xi$ and $\eta$;
+			\part Determine if $\xi$ and $\eta$ are independent;
+			\part Find covariation matrix of this random vector;
+			\part Find conditional expectations $\E(\xi|\eta)$ and $\E(\eta|\xi)$.
+		\end{parts}
+		\textcolor{cyan}{Answer:}
+		
+		\question
+		Random vector $(\xi, \eta)^T$ is uniformly distributed inside the triangle with vertices $(-5, 0)$, $(5, 0)$ and $(0, 4)$.
+		Find: 
+		\begin{parts}
+			\part $\E(\eta|\xi=2)$, $\Var(\eta|\xi=2)$;
+			\part $\E(\xi|\eta=2)$, $\Var(\xi|\eta=2)$.
+		\end{parts}
+		\textcolor{cyan}{Answer:}
+		
+		
+		% Normal
+		\question
+		Let $\xi \sim N(0, 1)$ and $\eta = \xi^2$. Determine if $\xi$ and $\eta$ are independent and correlated.
+		
+		\question
+		Let $\zeta \sim N(0, 1)$. Find the correlation coefficient between:
+		\begin{parts}
+			\part $2\zeta$ and $3\zeta^3$;
+			\part $3\zeta^2 - 2$ and $2\zeta^2 + 3$.
+		\end{parts}
+		\textcolor{cyan}{Answer:}
+		
+		\question
+		Let $\xi$ and $\eta$ be independent random variables with $N(0, 1)$ distribution. Find the probability that a point with coordinates $(\xi, \eta)$ is situated within figure:
+		\begin{parts}
+			\part $\{|x| \leq 1, |y|
+			\leq 1\}$;
+			\part $\{|x| + |y| \leq 1\}$.
+		\end{parts}
+		\textcolor{cyan}{Answer:}
+		
+		
+		\question
+		Each of electores votes for candidate $A$ with probability $0.7$ and for candidate $B$ with probability $0.3$, and they vote independently of each other. There are 5000 electores in town N. Estimate the probability that candidate $A$:
+		\begin{parts}
+			\part gets exactly 1900 votes more than $B$;
+			\part gets at least 1900 votes more than $B$.
+		\end{parts}
+		\textcolor{cyan}{Answer:} (a) $\frac{1}{\sqrt{2\pi}\sqrt{1050}}e^{-\frac{25}{21}}$; (b) $\Phi(\frac{10}{\sqrt{42}})$.
+		
+		\question
+		There are 1000 seats in a theatre. The theatre has two entrances, each of them having its own cloakroom.  How many places should each cloakroom have in order that each of the visitors can give his or her coat to the cloakroom near the entrance where they came in. Please use the $99\%$ confidence interval. Consider the following situations:
+		\begin{parts}
+			\part the visitors come in pairs, and each of the pairs chooses one of the entrances at random;
+			\part the visitors come alone, and each of the  visitors chooses a random entrance.
+		\end{parts}
+		\textcolor{cyan}{Answer:} (a) $558$; (b) $541$.
+		
+		\question
+		Find the minimum quantity of times one has to flip a fair coin in order that a percentage of tails differs from the probability of getting tails no more than by $0.01$ with $95\%$ probability.
+		
+		\textcolor{cyan}{Answer:} $N \geq 9604$.
+		
+		
+		% Exponential
+		\question
+		It is known that $\xi_1,\dots,\xi_{100} \sim \Exp{\lambda}$ are independent identically distributed random variables. Find expected value and covariance matrix of random variable $\eta = (\eta_{100}, \eta_{30})^T$ where $\eta_{100} = \sum_{i=1}^{100} \xi_i$ and $\eta_{30} = \sum_{i=1}^{30} \xi_i$.
+		
+		\textcolor{cyan}{Answer:} $\E\eta = \begin{pmatrix}
+			\frac{100}{\lambda}\\
+			\frac{30}{\lambda}
+		\end{pmatrix}$;
+		$K = \begin{pmatrix}
+			\frac{100}{\lambda^2} & \frac{30}{\lambda^2}\\
+			\frac{30}{\lambda^2} & \frac{30}{\lambda^2}
+		\end{pmatrix}$
+		
+		\question
+		Let $\zeta \sim \Exp(\lambda)$. Find the correlation coefficient between:
+		\begin{parts}
+			\part $2\zeta + 3$ and $3\zeta  -1$;
+			\part $\zeta^2$ and $\zeta^2 - \zeta$.
+		\end{parts}
+		\textcolor{cyan}{Answer:}
+		
+		\question
+		The height of the cylinder $\eta$ and the radius of the base $\xi$ are independent random variables whose distributions are $U(a, b)$ and $\Exp(\lambda)$ respectively. Find expectation and variance of a volume of such a cylinder.
+		
+		\textcolor{cyan}{Answer:}
+		
+		\question
+		From the Chebyschev inequality we know that $P(|\xi - \E\xi| \leq 3\sqrt{\Var\xi}) \geq \frac{8}{9}$. Compare that estimate to the exact value of the described probability if:
+		
+		\begin{parts}
+			\part $\xi \sim N(\mu, \sigma^2)$;
+			\part $\xi \sim \Exp(\lambda)$;
+			\part $\xi \sim U(a, b)$.
+		\end{parts}
+		
+		
+
+		% Uncategorized
+
+	
+		
+		
+		% Leftovers
+%		\question
+%		Random vector $(\xi, \eta)^T$ is given by its cumulative distribution function $F_{\xi,\eta}(x, y) = (1 - e^{-\lambda x} - e^{\mu y} + e^{-\lambda x - \mu y}) I_{x > 0} I_{y > 0}$.
+%		\begin{parts}
+	%			\part Find marginal distribution of $\xi$ and $\eta$;
+	%			\part Determine if $\xi$ and $\eta$ are independent;
+	%			\part Find covariation matrix of this random vector;
+	%			\part Find conditional expectations $\E(\xi|\eta)$ and $\E(\eta|\xi)$.
+	%		\end{parts}
+%		\textcolor{cyan}{Answer:}
+%		
+%		\question
+%		Probability density of random vector $(\xi, \eta)^T$ is given by $f(x, y) = \frac{a}{1 + x^2 + y^2 + x^2y^2}$. Find $a$ and marginal densities of $\xi$ and $\eta$. Determine whether $\xi$ and $\eta$ are independent and correlated.
+
+%		\question
+%		Random variables $\xi_1$ and $\xi_2$ are independent and uniformly distributed on $[0, 1]$. Find the distributions of $\eta = \xi_1\xi_2$ and $\zeta = \frac{\xi_2}{\xi_1}$.
+%		
+%		\question
+%		Random vector $(\xi, \eta)^T$ is uniformly distributed within a circle given by $x^2 + y^2 \leq 25$. Find the distribution of $\zeta = \frac{\xi}{\eta}$.
+
+%		\question
+%Random variables $\xi_1$ and $\xi_2$ are independent and have a standard normal distribution. Find the distributions of $\eta = \frac{\xi_2}{\xi_1}$ and $\zeta = \frac{|\xi_2|}{\xi_1}$ and $\gamma = \frac{\xi_2}{|\xi_1|}$.
+%
+%\textcolor{cyan}{Answer:}
+
+%		\question
+%Find probability density of $\xi + \eta$ where $\xi$ and $\eta$ are independent random variables uniformly distributed on $[0, 1]$.
+%
+%\textcolor{cyan}{Answer:}
+
+
+%		\question
+%Let $X$ and $Y$ be independent random variables with a standard normal distribution. Find probability densities of:
+%\begin{parts}
+%	\part $X + Y$;
+%	\part $X^2$;
+%	\part $X^2 + Y^2$.
+%\end{parts}
+%\textcolor{cyan}{Answer:} (a) $f_{X+Y}(t) = \frac{1}{\sqrt{4\pi}}e^{\frac{t^2}{4}} \sim N(0, 2)$; (b) $f_{X^2}(t) = \frac{1}{\sqrt{2\pi t}}e^{-\frac{t}{2}}$;
+%(c) $f_{X^2 + Y^2}(t) = \frac{1}{2}e^{-\frac{t}{2}} \sim \Exp(0.5)$
+
+%		\question
+%Probability density of random vector $(\xi, \eta)$ is given by $f_{\xi,\eta}(x, y) = \frac{C\cdot I_{x>0} \cdot I_{y > 0}}{(1 + x + y)^3}$. Find the probability density of $\zeta = \xi + \eta$.
+
+%		\question
+%Random variables $\xi_1$ and $\xi_2$ are independent and exponentially distributed with parameter $\lambda$. Find the distributions of $\eta = \frac{\xi_2}{\xi_1}$ and $\zeta = \frac{\xi_2}{\xi_1 + \xi_2}$.
+
+	\end{questions}
+\end{document}
