@@ -1,0 +1,171 @@
+\documentclass[14pt]{exam}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage{diagbox}
+\usepackage{float}
+
+
+\title{Probability and Statistics. Weeks 14-15}
+\date{}
+
+\def\Var{{\textrm{Var}}\,}
+\def\E{{\textrm{E}}\,}
+\def\Exp{{\textrm{Exp}}\,}
+
+\begin{document}
+	\maketitle
+	
+	\begin{questions}
+		\question
+		(Walpole 9.3)
+    		Many cardiac patients wear an implanted pacemaker to control their heartbeat. A plastic connector module mounts on the top of the pacemaker. Assuming a standard deviation of $0.0015$ inch and an approximately normal distribution, find a $95\%$ confidence interval for the mean of the depths of all connector modules made by a certain manufacturing company. A random sample of 75 modules has an average depth of $0.310$ inch.
+		
+		% \begin{parts}
+		% 	\part Construct a $98\%$ confidence interval for the mean height of all college students.
+		% 	\part What can we assert with $98\%$ confidence about the possible size of our error if we estimate the mean height of all students to be $174.5$ centimeters?
+		% \end{parts}
+		
+		\question
+		(Walpole 9.13)
+                A random sample of $12$ shearing pins is taken in a study of the Rockwell hardness of the pin head. Measurements on the Rockwell hardness are made for each of the $12$, yielding an average value of $48.50$ with a sample standard deviation of $1.5$. Assuming the measurements to be normally distributed, construct a $90\% $ confidence interval for the mean Rockwell hardness.
+		
+		\question
+		(Walpole 9.20)
+		Consider the situation of Exercise 9.11. Estimation of the mean diameter, while important, is not nearly as important as trying to pin down the location of the majority of the distribution of diameters. Find the 95\% tolerance limits that contain 95\% of the diameters.
+  
+        \textit{Exercise 9.11 A machine produces metal pieces that are cylindrical
+        in shape. A sample of pieces is taken, and the
+        diameters are found to be 1.01, 0.97, 1.03, 1.04, 0.99,
+        0.98, 0.99, 1.01, and 1.03 centimeters. Find a 99\% confidence
+        interval for the mean diameter of pieces from
+        this machine, assuming an approximately normal distribution.}
+		
+		\question
+		(Walpole 9.37)
+            A study was conducted to determine if a certain treatment has any effect on the amount of metal removed in a pickling operation. A random sample of
+            100 pieces was immersed in a bath for 24 hours without the treatment, yielding an average of 12.2 millimeters of metal removed and a sample standard deviation of 1.1 millimeters. A second sample of 200 pieces was exposed to the treatment, followed by the 24-hour immersion in the bath, resulting in an average removal of 9.1 millimeters of metal with a sample standard deviation of 0.9 millimeter. Compute a 98\% confidence interval estimate for the difference between the population means. Does the treatment appear to reduce the mean amount of metal removed?
+		
+		\question
+		(Walpole 9.38)
+		Two catalysts in a batch chemical process, are being compared for their effect on the output of the process reaction. A sample of 12 batches was prepared using catalyst 1, and a sample of 10 batches was prepared using catalyst 2. The 12 batches for which catalyst 1 was used in the reaction gave an average yield of 85 with a sample standard deviation of 4, and the 10 batches for which catalyst 2 was used gave an average yield of 81 and a sample standard deviation of 5. Find a 90\% confidence interval for the difference between the population means, assuming that the populations are approximately normally distributed with equal variances.
+		
+		\question
+		(Walpole 9.46)
+		
+		The following data represent the running times of films produced by two motion-picture companies.  
+
+        $$
+        \begin{tabular}{c|lllllll}
+        \multicolumn{1}{l|}{Company} & \multicolumn{7}{c}{Time (minutes)}   \\ \hline
+        I                            & 103 & 94 & 110 & 87 & 98  &    &     \\
+        II                           & 97  & 82 & 123 & 92 & 175 & 88 & 118
+        \end{tabular}
+        \label{tab:9_46}
+        $$
+
+
+  Compute a 90\% confidence interval for the difference between the average running times of films produced by the two companies. Assume that the running-time differences are approximately normally distributed with unequal variances.
+		
+		\question
+		(Walpole 9.72)
+            A random sample of 20 students yielded a mean of $\overline{x} = 72$ and a variance of $s^2 = 16$ for scores on a college placement test in mathematics. Assuming the scores to be normally distributed, construct a $98\%$ confidence interval for $\sigma^2$.
+
+            \question
+		(Walpole 10.4)
+A fabric manufacturer believes that the proportion of orders for raw material arriving late is $p = 0.6$. If a random sample of 10 orders shows that 3 or fewer
+arrived late, the hypothesis that $p = 0.6$ should be rejected in favor of the alternative $p < 0.6$. Use the binomial distribution.
+		\begin{parts}
+			\part Find the probability of committing a type I error 
+                    if the true proportion is $p = 0.6$.
+			\part Find the probability of committing a type II error
+                    for the alternatives $p = 0.3$, $p = 0.4$, and $p = 0.5$.
+		\end{parts}
+    
+            \question
+            (Walpole 10.9)
+            A dry cleaning establishment claims that a new spot remover will remove more than $70\% $ of the spots to which it is applied. To check this claim, the spot remover will be used on 12 spots chosen at random. If fewer than 11 of the spots are removed, we shall not reject the null hypothesis that $p = 0.7$; otherwise, we conclude that $p > 0.7$.
+            \begin{parts}
+    			\part Evaluate $\alpha$, assuming that $p = 0.7$.
+    			\part Evaluate $\beta$ for the alternative $p = 0.9$.
+            \end{parts}
+
+            \question
+            (Walpole 10.14)
+            A manufacturer has developed a new fishing line, which the company claims has a mean breaking strength of 15 kilograms with a standard deviation of 0.5 kilogram. To test the hypothesis that $\mu = 15$ kilograms against the alternative that $\mu < 15$ kilograms, a random sample of 50 lines will be tested. The critical region is defined to be $\overline{x} < 14.9$.
+            \begin{parts}
+    			\part Find the probability of committing a type I error when $H_0$ is true.
+    			\part Evaluate $\beta$ for the alternatives $\mu = 14.8$ and $\mu = 14.9$ kilograms.
+            \end{parts}
+
+            \question
+            (Walpole 10.22)
+            In the American Heart Association journal Hypertension, researchers report that individuals who practice Transcendental Meditation (TM) lower their blood pressure significantly. If a random sample of 225 male TM practitioners meditate for 8.5 hours per week with a standard deviation of 2.25 hours, does that suggest that, on average, men who use TM meditate more than 8 hours per week? Quote a P-value in your conclusion.
+            \question
+            (Walpole 10.23)
+            Test the hypothesis that the average content of containers of a particular lubricant is 10 liters if the contents of a random sample of 10 containers are 10.2, 9.7, 10.1, 10.3, 10.1, 9.8, 9.9, 10.4, 10.3, and 9.8 liters. Use a 0.01 level of significance and assume that the distribution of contents is normal.
+
+            \question
+            (Walpole 10.32)
+            Amstat News (December 2004) lists median salaries for associate professors of statistics at research institutions and at liberal arts and other institutions in the United States. Assume that a sample of 200 associate professors from research institutions has an average salary of \$70,750 per year with a standard deviation of \$6000. Assume also that a sample of 200 associate professors from other types of institutions has an average salary of \$65,200 with a standard deviation of \$5000. Test the hypothesis that the mean salary for associate professors in research institutions is \$2000 higher than for those in other institutions. Use a 0.01 level of significance.
+
+            \question
+            (Walpole 10.38)
+            A UCLA researcher claims that the average life span of mice can be extended by as much as 8 months when the calories in their diet are reduced by approximately 40\% from the time they are weaned. The restricted diets are enriched to normal levels by vitamins and protein. Suppose that a random sample of 10 mice is fed a normal diet and has an average life span of 32.1 months with a standard deviation of 3.2 months, while a random sample of 15 mice is fed the restricted diet and has an average life span of 37.6 months with a standard deviation of 2.8 months. Test the hypothesis, at the 0.05 level of significance, that the average life span of mice on this restricted diet is increased by 8 months against the alternative that the increase is less than 8 months. Assume the distributions of life spans for the regular and restricted diets are approximately normal with equal variances.
+
+            \question
+            (Walpole 10.42)
+            Five samples of a ferrous-type substance were used to determine if there is a difference between a laboratory chemical analysis and an X-ray fluorescence analysis of the iron content. Each sample was split into two subsamples and the two types of analysis were applied. Following are the coded data showing the iron content analysis:
+            $$
+            \begin{tabular}{cccccc}
+            \multicolumn{1}{l}{} & \multicolumn{5}{c}{Sample}  \\ \cline{2-6} 
+            Analysis             & 1   & 2   & 3   & 4   & 5   \\ \hline
+            X-Ray                & 2.0 & 2.0 & 2.3 & 2.1 & 2.4 \\
+            Chemical             & 2.2 & 1.9 & 2.5 & 2.3 & 2.4
+            \end{tabular}
+            \label{tab:10_42}
+            $$
+            Assuming that the populations are normal, test at the 0.05 level of significance whether the two methods of analysis give, on the average, the same result.
+
+            \question
+            (Walpole 10.49)
+            How large a sample is required in Exercise 10.24 if the power of the test is to be 0.95 when the true average height differs from 162.5 by 3.1 centimeters? Use $\alpha=0.02$.
+            
+            \textit{Exercise 10.24 The average height of females in the freshman class of a certain college has historically been 162.5 centimeters with a standard deviation of 6.9 centimeters. Is there reason to believe that there has been a change in the average height if a random sample of 50 females in the present freshman class has an average height of 165.2 centimeters? Use a P-value in your conclusion. Assume the standard deviation remains the same.}
+
+            \question
+            (Walpole 10.53)
+            A study was conducted at the Department of Veterinary Medicine at Virginia Tech to determine if the “strength” of a wound from surgical incision is affected by the temperature of the knife. Eight dogs were used in the experiment. “Hot” and “cold” incisions were made on the abdomen of each dog, and the strength was measured. The resulting data appear below.
+            \begin{parts}
+    			\part Write an appropriate hypothesis to determine if there is a significant difference in strength between the hot and cold incisions.
+    			\part Test the hypothesis using a paired t-test. Use a P-value in your conclusion.
+            \end{parts}
+
+            $$
+            \begin{tabular}{ccc}
+            Dog & Knife & Strength \\ \hline
+            1   & Hot   & 5120     \\
+            1   & Cold  & 8200     \\
+            2   & Hot   & 10000    \\
+            2   & Cold  & 8600     \\
+            3   & Hot   & 10000    \\
+            3   & Cold  & 9200     \\
+            4   & Hot   & 10000    \\
+            4   & Cold  & 6200     \\
+            5   & Hot   & 10000    \\
+            5   & Cold  & 10000    \\
+            6   & Hot   & 7900     \\
+            6   & Cold  & 5200     \\
+            7   & Hot   & 510      \\
+            7   & Cold  & 885      \\
+            8   & Hot   & 1020     \\
+            8   & Cold  & 460     
+            \end{tabular}
+            \label{tab:10_42}
+            $$
+	\end{questions}
+
+            
+	
+\end{document}
