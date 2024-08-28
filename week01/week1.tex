@@ -1,133 +1,149 @@
 \documentclass[14pt]{exam}
 
 \usepackage{amsmath}
+\usepackage{amssymb}
 \usepackage{xcolor}
+\usepackage{diagbox}
+\usepackage{float}
 
 \title{Probability and Statistics. Week 1}
 \date{}
+
+\def\Var{{\textrm{Var}}\,}
+\def\E{{\textrm{E}}\,}
+\def\Exp{{\textrm{Exp}}\,}
 
 \begin{document}
 	\maketitle
 	
 	
+	
 	\begin{questions}
+		
 		\question
-		A cube with all of its faces painted is sawn into 343 smaller cubes of equal sizes. One of the small cubes is chosen at random. Find the probability that this cube:
+		(Walpole 1.2)
+		%According to the journal \textit{Chemical Engineering}, an important property of a fiber is its water absorbency. A random sample of 20 pieces of cotton fiber was taken and the absorbency on each piece was measured. The following are the absorbency values:
+		The reaction time, in milliseconds, of 20 amateur racers is measured. A sample is as follows:
+		
+
+		$$
+		\begin{tabular}{lllllll}
+			187.1 & 214.1 & 207.2 & 218.1 & 192.9 & 224.3 & 201.7\\
+			237.1 & 194.4 & 205.0 & 189.2 & 203.3 & 230.0 & 228.5\\
+			192.5 & 217.7 & 221.1 & 197.7 & 180.4 & 211.2
+		\end{tabular}
+		\label{tab:1_2}
+		$$
 		
 		\begin{parts}
-			\part has exactly one painted face;
-			\part has exactly two painted faces;
-			\part has at least two painted faces.
+			\part Calculate the sample mean and sample median for the above sample values.
+			\part Compute the 10\% trimmed mean.
+			\part Do a dot plot of the absorbency data.
+			\part Using only the values of the mean, median, and trimmed mean, do you have evidence of outliers in the data?
 		\end{parts}
 		
-		\textcolor{cyan}{Answer:} (a) $\frac{150}{343}$, (b) $\frac{60}{343}$, (c) $\frac{68}{343}$.
 		
 		\question
-		List the elements of each of the following sample spaces:
+		\label{ex:1_5}
+		(Walpole 1.5 and 1.11)
+		%Twenty adult males between the ages of 30 and 40 participated in a study to evaluate the effect of specific health regimen involving diet and exercise on the blood cholesterol. Ten were randomly selected to be in a control group, and ten others were assigned to take part in the regimen as the treatment group for a period of 6 months. The following data show the reduction in cholesterol experienced for the time period for 20 subjects:
+		The effect of regular exercising on a cholesterol level is being evaluated. All participants are  divided into two equal groups. Changes in cholesterol levels reported below.
+		$$
+		\begin{tabular}{cccccc}
+			Control group: & 7 & 3 & -4 & 14 & 2\\
+						   & 5 & 22 & -7 & 9 & 5\\
+			Treatment group: & -6 & 5 & 9 & 4 & 4\\
+							 & 12 & 37 & 5 & 3 & 3
+		\end{tabular}
+		\label{tab:1_5}
+		$$
+		\begin{parts}
+			\part Do a dot plot of the data for both groups on the same graph.
+			\part Compute the mean, median, and 10\% trimmed mean for both groups.
+			\part Explain why the difference in means suggests one conclusion about the effect of the regimen, while the difference in medians or trimmed means suggests a different conclusion.
+			\part Compute the sample variance and the sample standard deviation for both groups.
+		\end{parts}
+		
+		\question
+		(Walpole 1.13)
+		A manufacturer of electronic components is interested in determining the lifetime of a certain type of battery. A sample, in hours of life, is as follows:
+		
+		$$
+		123, 116, 122, 110, 175, 126, 125, 111, 118, 117
+		$$
 		
 		\begin{parts}
-			\part the set $S = \{x | 9 - 3 x^2 \geq 0 \text{ and } x > 0\}$
-			\part the set $S = \{x | 2x - 4 \geq 0 \text{ and } x < 1\}$.
+			\part Find the sample mean and median.
+			\part What feature in this data set is responsible for the substantial difference between the two? Recalculate the mean without that feature and compare the results.
 		\end{parts}
 		
-		\textcolor{cyan}{Answer:} (a) $S = (0, \sqrt 3]$, (b) $\emptyset$
-		
 		\question
-		$m$ white balls and $n$ black balls are placed at random in a row. Find the probability that $k^\text{th}$ place is occupied with a black ball.
+		(Walpole 1.17)
+		A study of the effects of smoking on sleep patterns is conducted. The measure observed is the time, in munutes, that it takes to fall asleep. These data are obtained:
 		
-		\textcolor{cyan}{Answer:} $\frac{n}{m+n}$.
-		
-		\question
-		Six volumes are placed on a bookshelf in a random order. Find the probability that at least one of the volumes is not on its correct position.
-		
-		\textcolor{cyan}{Answer:} $\frac{719}{720}$.
-		
-		\question
-		There were 26 white balls and 14 black balls in the urn. One of the balls has disappeared. After that one ball is taken at random from the urn. Determine the probability that the ball is black.
-		
-		\textcolor{cyan}{Answer:} $0.35$.
-		
-		\question
-		Four people enter the lift at the ground floor of a nine-storey building. Find the probability that at least two of them get off at the same floor.
-		
-		\textit{Note:} We use the following conventions for problems with lifts if it is not stated otherwise. 1) The floors are counted this way: ground floor, first floor, second floor, etc. 2) We assume that all people who have entered the lift at the ground floor can go out of it on each floor starting with the first one with equal probabilities and independently from the others. 3) No other people enter the lift as it goes up.
-		
-		\textcolor{cyan}{Answer:} $\frac{151}{256}$.
-		
-		\question
-		Seventy numbers are chosen at random from integers $1, 2, 3, \dots, 100$. What is the probability that the largest number chosen is 98?
-		
-		\textcolor{cyan}{Answer:} $\frac{29}{462}$.
-		
-		\question
-		$m$ white balls, $n$ black balls and $k$ yellow balls are placed at random in a row. Determine the probability that if looking at the balls from left to right, we will see a white ball before we see a black one?
-		
-		\textcolor{cyan}{Answer:} $\frac{m}{m+n}$.
-		
-		\question
-		Six letters are chosen at random from the ones of the word PROPORTION. Determine the probability that it is possible to form the following words from these letters:
+		$$
+		\begin{tabular}{ccccc}
+			Smokers (A): & 69.3 & 56.0 & 22.1 & 47.6\\
+					& 53.2 & 48.1 & 52.7 & 34.4\\
+					& 60.2 & 43.8 & 23.2 & 13.8\\
+			Nonsmokers (B):	& 28.6 & 25.1 & 26.4 & 34.9\\
+						& 29.8 & 28.4 & 38.5 & 30.2\\
+						& 30.6 & 31.8 & 41.6 & 21.1\\
+						& 36.0 & 37.9 & 13.9
+		\end{tabular}
+		\label{tab:1_17}
+		$$
 		
 		\begin{parts}
-			\part OPTION;
-			\part PORT;
-			\part RIOT.
+			\part Find the sample mean for each group.
+			\part Find the sample standard deviation for each group.
+			\part Make a dot plot of the data sets A and B on the same line.
+			\part Comment on what kind of impact smoking appears to have on the time required to fall asleep.
 		\end{parts}
 		
-		\textcolor{cyan}{Answer:} (a) $\frac{1}{35}$, (b) $\frac{79}{210}$, (c) $\frac{5}{21}$.
-		
 		\question
-		Twenty participants of a chess tournament are casting lots in order to get into one of two groups (each of the groups has 10 players in it). Find the probability that two of the strongest players are in the same group.
+		(Walpole 1.18) % b & c only
+		The following scores represent the final examination grades for an elementary statistics course:
 		
-		\textcolor{cyan}{Answer:} $\frac{9}{19}$.
-		
-		\question
-		Two different numbers are chosen at random from the set $\{1, 2, \dots, 100\}$. What is the probability that the first one is greater than the second?
-		
-		\textcolor{cyan}{Answer:} $0.5$.
-		
-		\question
-		What is the probability to get two "threes" when rolling two dice given that the sum of the two numbers is a multiple of 3?
-		
-		\textcolor{cyan}{Answer:} $\frac{1}{12}$.
-		
-		\question
-		An urn contains 6 white balls, 4 black balls and 2 orange balls. Three balls are taken at random out of the urn. What is the probability that the balls are of the same colour?
-		
-		\textcolor{cyan}{Answer:} $\frac{6}{55}$.
-		
-		\question
-		A card is drawn at random from a deck of 36 cards. Let $A$ = {the card is a jack} and $B$ = {the card has a black suit}. Find the probability of $A \cup B$.
-		
-		\textcolor{cyan}{Answer:} $\frac{5}{9}$.
-		
-		\question
-		A coin is flipped until one does not get a sequence "tails-tails-tails". What is the probability that the coin has been flipped
+		$$
+		\begin{tabular}{ccccccccc}
+			23 & 60 & 79 & 32 & 57 & 74 & 52 & 70 & 82\\
+			36 & 80 & 77 & 81 & 95 & 41 & 65 & 92 & 85\\
+			55 & 76 & 52 & 10 & 64 & 75 & 78 & 25 & 80\\
+			98 & 81 & 67 & 41 & 71 & 83 & 54 & 64 & 72\\
+			88 & 62 & 74 & 43 & 60 & 78 & 89 & 76 & 84\\
+			48 & 84 & 90 & 15 & 79 & 34 & 67 & 17 & 82\\
+			69 & 74 & 63 & 80 & 85 & 61
+		\end{tabular}
+		\label{tab:1_18}
+		$$
 		
 		\begin{parts}
-			\part exactly 6 times;
-			\part exactly 7 times.
+			\setcounter{partno}{1}
+			\part Construct a relative frequency histogram, draw an estimate of the graph of the distribution, and discuss the skewness of the distribution.
+			\part Compute the sample mean, sample median, and sample standard deviation.
 		\end{parts}
 		
-		\textcolor{cyan}{Answer:} (a) $\frac{1}{16}$, (b) $\frac{7}{128}$.
-		
 		\question
-		A coin is flipped until one does not get a sequence "heads-tails-heads". What is the probability that the coin has been flipped
+		(Walpole 1.20) % b, c, d only
+		The following data represents the length of life, in seconds, of 50 fruit flies subject to a new spray in a controlled laboratory experiment:
+		
+		$$
+		\begin{tabular}{cccccccccc}
+			17 & 20 & 10 & 9 & 23 & 13 & 12 & 19 & 18 & 24\\
+			12 & 14 & 6 & 9 & 13 & 6 & 7 & 10 & 13 & 7\\
+			16 & 18 & 8 & 13 & 3 & 32 & 9 & 7 & 10 & 11\\
+			13 & 7 & 18 & 7 & 10 & 4 & 27 & 19 & 16 & 8\\
+			7 & 10 & 5 & 14 & 15 & 10 & 9 & 6 & 7 & 15
+		\end{tabular}
+		\label{tab:1_20}
+		$$
 		
 		\begin{parts}
-			\part exactly 6 times;
-			\part exactly 7 times.
+			\setcounter{partno}{1}
+			\part Set up a relative frequency distribution.
+			\part Construct a relative frequency histogram.
+			\part Find the median.
 		\end{parts}
-		
-		\textcolor{cyan}{Answer:} (a) $\frac{5}{64}$, (b) $\frac{9}{128}$.
-		
-		\question
-		Three dice are rolled. What is the probability that the product of all numbers rolled is 24?
-		
-		\textcolor{cyan}{Answer:} $\frac{5}{72}$.
-		
-		\question
-		A woman arrives at the airport between 11 and 12 o'clock, waits for her husband for 10 minutes, and if the does not arrive, she hails a taxi and leaves the airport alone (and the husband has a lot of trouble!). Her husband shows up at the airport at some time between 11 and 11:40. He waits for 20 minues, and if he does not meet his wife, he goes home (and he is in a lot of trouble!) What is the probability that the husband ends up in having lots of trouble?
-		
-		\textcolor{cyan}{Answer:} $\frac{25}{48}$.
 	\end{questions}
 \end{document}
