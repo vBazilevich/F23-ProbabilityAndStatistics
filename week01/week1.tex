@@ -1,6 +1,7 @@
 \documentclass[14pt]{exam}
 
 \usepackage{amsmath}
+\usepackage{nicefrac}
 \usepackage{amssymb}
 \usepackage{xcolor}
 \usepackage{diagbox}
@@ -38,7 +39,7 @@
 		\begin{parts}
 			\part Calculate the sample mean and sample median for the above sample values.
 			\part Compute the 10\% trimmed mean.
-			\part Do a dot plot of the absorbency data.
+			\part Do a dot plot of the reaction time data.
 			\part Using only the values of the mean, median, and trimmed mean, do you have evidence of outliers in the data?
 		\end{parts}
 		
@@ -47,7 +48,7 @@
 		\label{ex:1_5}
 		(Walpole 1.5 and 1.11)
 		%Twenty adult males between the ages of 30 and 40 participated in a study to evaluate the effect of specific health regimen involving diet and exercise on the blood cholesterol. Ten were randomly selected to be in a control group, and ten others were assigned to take part in the regimen as the treatment group for a period of 6 months. The following data show the reduction in cholesterol experienced for the time period for 20 subjects:
-		The effect of regular exercising on a cholesterol level is being evaluated. All participants are  divided into two equal groups. Changes in cholesterol levels reported below.
+		The effect of regular exercising on a cholesterol level is being evaluated. All participants are  divided into two equal groups. Reductions in cholesterol levels reported below.
 		$$
 		\begin{tabular}{cccccc}
 			Control group: & 7 & 3 & -4 & 14 & 2\\
@@ -120,7 +121,7 @@
 		
 		\begin{parts}
 			\setcounter{partno}{1}
-			\part Construct a relative frequency histogram, draw an estimate of the graph of the distribution, and discuss the skewness of the distribution.
+			\part Construct a relative frequency histogram, and discuss the skewness of the distribution.
 			\part Compute the sample mean, sample median, and sample standard deviation.
 		\end{parts}
 		
@@ -145,5 +146,36 @@
 			\part Construct a relative frequency histogram.
 			\part Find the median.
 		\end{parts}
+		
+		\question
+		Implement in code:
+		\begin{itemize}
+			\item Mean computation;
+			\item Median computation;
+			\item Standard deviation;
+			\item MAD computation;
+			\item Histogram plotting.
+		\end{itemize}
+		
+		You can download required ipynb notebook and data sample from Moodle.
+		
+		\textit{Note:} you can use Google Colab or configure local Jupyter notebook environment.
+		
+		\question
+		Rolling a fair die you have equal chances to observer 1, 2, 3, 4, 5, or 6.
+		
+		In case you roll 2 dice, resulting sum is between 2 and 12. Both 9 and 10 can be obtained in two ways: $9 = 3 + 6 = 4 + 5$, $10 = 4 + 6 = 5 + 5$.
+		
+		In case you roll 3 dice, both 9 and 10 obtained in 6 ways. 
+		
+		Then, why 9 shows is more likely to be observed when you roll 2 dice, and 10 is more frequently observed when you roll 3 dice?
+		
+		\textit{Note:} word "die" is a singular form of "dice". However, nowadays those "dice" is used both as a singular and plural.
+		
+		\question
+		When you roll a die 4 times probability that 1 shows up at least once exceeds $\nicefrac{1}{2}$. However, when you roll 2 dice 24 times, probability that 1 appears on both dice simultaneously at least once is below $\nicefrac{1}{2}$. This result is contradictory, because probability of observing 1 is 6 times more than probability of observing two 1's, and 24 rolls is exactly 6 times more than 4 rolls. Explain this contradiction.
+		
+		\question
+		We flip 3 fair coins. At least two of them show the same side, and head and tails on a 3rd coin are equally likely to appear. It follows that all three show the same side is $\nicefrac{1}{2}$. Is it true?
 	\end{questions}
 \end{document}
